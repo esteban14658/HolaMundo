@@ -7,12 +7,13 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import main.Persona;
 import model.PersonaModel;
 import view.PersonaView;
 
 /**
  *
- * @author Jimmy Alexander Paez Moreno
+ * @author Jimmy Alexander Paez Moreno & Esteban Rodrigo Beltran Abello
  */
 public class PersonaController {
     private PersonaModel personaModel;
@@ -35,7 +36,7 @@ public class PersonaController {
                 nombre = personaView.getTFNombre();
                 apellido = personaView.getTFApellido();
                 
-                PersonaModel persona = new PersonaModel(nombre,apellido);
+                Persona persona = new Persona(nombre,apellido);
                 
                 personaModel.agregarPersona(persona);
                 
