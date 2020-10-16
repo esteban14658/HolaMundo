@@ -7,6 +7,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -63,9 +64,22 @@ public class PersonaModel {
      * 
      * @return Devuelve una arreglo de personas simulando un select * a base de
      * datos.
-     */
-    public static List<PersonaModel> getListaPersona() {
-        return listaPersona;
+     */    
+    public DefaultTableModel getListaPersona(){
+        DefaultTableModel modelo = new DefaultTableModel();
+        
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido");
+        
+        for(PersonaModel pers: listaPersona){
+            Object[] fila = new Object[2];
+            fila[0] = pers.getNombre();
+            fila[1] = pers.getApellido();
+            
+            modelo.addRow(fila);
+        }
+        
+        return modelo;
     }
 
     /**
