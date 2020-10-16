@@ -10,39 +10,70 @@ import java.util.List;
 
 /**
  *
- * @author Jimmy Alexander Paez Moreno
+ * @author Jimmy Alexander Paez Moreno & Esteban Rodrigo Beltran Abello
  */
-public class Persona {
-    private final static List<Persona> listaPersona = new ArrayList();
+public class PersonaModel {
+    private final static List<PersonaModel> listaPersona = new ArrayList();
     private String nombre;
     private String apellido;
 
-    public Persona(String nombre, String apellido) {
+    /**
+     * 
+     * @param nombre Hace referencia al nombre de la persona.
+     * @param apellido Hace referencia al apellido de la persona.
+     */
+    public PersonaModel(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
+    /**
+     * 
+     * @return Devuelve el nombre de la persona.
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * 
+     * @param nombre Establece el nombre de la persona.
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * 
+     * @return Devuelve el apellido de la persona.
+     */
     public String getApellido() {
         return apellido;
     }
 
+    /**
+     * 
+     * @param apellido Establece el apellido de la persona.
+     */
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public static List<Persona> getListaPersona() {
+    /**
+     * 
+     * @return Devuelve una arreglo de personas simulando un select * a base de
+     * datos.
+     */
+    public static List<PersonaModel> getListaPersona() {
         return listaPersona;
     }
 
-    public void agregarPersona(Persona persona) {
-        Persona.listaPersona.add(persona);
+    /**
+     * 
+     * @param persona Agrega una persona al arreglo de personas simulando un
+     * insert into en base de datos.
+     */
+    public void agregarPersona(PersonaModel persona) {
+        PersonaModel.listaPersona.add(persona);
     }
 }
