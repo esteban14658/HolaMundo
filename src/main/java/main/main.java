@@ -7,7 +7,7 @@ package main;
 
 /**
  *
- * @author Jimmy Alexander Paez Moreno
+ * @author Jimmy Alexander Paez Moreno & Esteban Rodrigo Beltran Abello
  */
 public class main {
     
