@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -63,11 +64,6 @@ public class PersonaView extends javax.swing.JFrame {
         jLabel2.setText("Apellido:");
 
         BAgregar.setText("Agregar");
-        BAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BAgregarMouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,10 +106,6 @@ public class PersonaView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BAgregarMouseClicked
-        
-    }//GEN-LAST:event_BAgregarMouseClicked
-
     public String getTFApellido() {
         return TFApellido.getText();
     }
@@ -132,6 +124,10 @@ public class PersonaView extends javax.swing.JFrame {
 
     public void setTableModelPersonas(DefaultTableModel modelo) {
         this.TablePersonas.setModel(modelo);
+    }
+    
+    public void agragarBotonListener(ActionListener listener) {
+        BAgregar.addActionListener(listener);
     }
     
     public void mostrarError(String mensajeError) {
