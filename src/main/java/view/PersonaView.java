@@ -126,7 +126,7 @@ public class PersonaView extends javax.swing.JFrame {
         this.TablePersonas.setModel(modelo);
     }
     
-    public void agragarBotonListener(ActionListener listener) {
+    public void agregarBotonListener(ActionListener listener) {
         BAgregar.addActionListener(listener);
     }
     
